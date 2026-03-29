@@ -60,7 +60,7 @@ if (pvzCount === 0) {
 
     const transaction = db.transaction((list) => {
         for (const item of list) {
-            // Явно берем элементы по индексам, чтобы не было сюрпризов
+            // Явно берем элементы по индексам
             insertPvz.run(item[0], item[1], item[2]);
         }
     });
